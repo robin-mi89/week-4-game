@@ -1,0 +1,56 @@
+.neutral-ship{
+    background-color: gray;
+}
+
+body{
+     background: url("../images/background2.jpg");
+     background-repeat: no-repeat;
+     background-position: top center;
+     background-color: #021013;
+}
+
+h1, h2, h3, h4, p {
+    color: white;
+}
+
+.ship{
+    width: 140px;
+    height: 140px;
+    float: left;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.enemy-ship{
+    background-color: red;
+}
+
+.friendly-ship{
+    background-color: green;
+}
+
+.defender-ship{
+    background-color: black;
+}
+
+.ship-img{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+
+.ship-name{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: white;
+}
+
+.ship-hp{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    bottom: 0%;
+    color: white;
+}
