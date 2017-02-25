@@ -14,13 +14,14 @@ var loseSound = ["assets/sounds/lose1.mp3", "assets/sounds/lose2.mp3", "assets/s
 var tieInterceptor = new Ship("tie/in Interceptor", 100, 25, 25, "assets/images/tieinterceptor.jpg");
 var tieFighter = new Ship("tie/ln Fighter", 120, 15, 15, "assets/images/tiefighter.jpg");
 var ywing = new Ship("Y-Wing Starfighter", 180, 10, 10, "assets/images/ywing.jpg");
-var xwing = new Ship("T65 X-Wing", 140, 20, 20, "assets/images/xwing.jpg");
+var xwing = new Ship("T65 X-Wing", 130, 20, 20, "assets/images/xwing.jpg");
 
 var allChars = [xwing, ywing, tieFighter, tieInterceptor];
 var hasUserShip = false;
 var hasDefender = false;
 var lost = false;
 var won = false;
+var atkIncrease = 6;
 
 $(document).ready(function() {
 
@@ -44,7 +45,7 @@ function fight(attacker, defender)
         $(".user-ship").empty();
         lose();
     }
-    attacker.atk += 8;
+    attacker.atk += atkIncrease;
     
 }
 
@@ -156,7 +157,7 @@ $(".neutral-ship , .friendly-ship, .defender-ship, .enemy-ship").remove();
     
     var img = $("<img>", { 
     src: allChars[i].img,
-    width: "90px",
+    width: "90px", 
     height: "90px"
     });
 
